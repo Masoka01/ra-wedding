@@ -1,0 +1,274 @@
+   <!-- Bagian Produk -->
+    <section id="produk" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Undangan Tema Kasih</h2>
+        <div class="row position-relative">
+          <!-- Produk 1 -->
+          <div class="col-6 col-md-4 mb-4 produk-item">
+            <div class="card h-100">
+              <img src="kasih/KASIH 01.jpeg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-nowrap">Kasih 01</h5>
+                <div class="lihat-detail-container">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="bi bi-eye"></i> Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Produk 2 -->
+          <div class="col-6 col-md-4 mb-4 produk-item">
+            <div class="card h-100">
+              <img src="kasih/KASIH 02.jpeg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-nowrap">Kasih 02</h5>
+                <div class="lihat-detail-container">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="bi bi-eye"></i> Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Produk 3 -->
+          <div class="col-6 col-md-4 mb-4 produk-item">
+            <div class="card h-100">
+              <img src="kasih/KASIH 03.jpeg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-nowrap">Kasih 03</h5>
+                <div class="lihat-detail-container">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="bi bi-eye"></i> Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Produk 4 (Awalnya Tersembunyi) -->
+          <div class="col-6 col-md-4 mb-4 produk-item d-none">
+            <div class="card h-100">
+              <img src="kasih/KASIH 04.jpeg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-nowrap">Kasih 04</h5>
+                <div class="lihat-detail-container">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="bi bi-eye"></i> Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Produk 5 (Awalnya Tersembunyi) -->
+          <div class="col-6 col-md-4 mb-4 produk-item d-none">
+            <div class="card h-100">
+              <img src="kasih/KASIH 05.jpeg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-nowrap">Kasih 05</h5>
+                <div class="lihat-detail-container">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="bi bi-eye"></i> Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Produk 6 (Awalnya Tersembunyi) -->
+          <div class="col-6 col-md-4 mb-4 produk-item d-none">
+            <div class="card h-100">
+              <img src="kasih/KASIH 06.jpeg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-nowrap">Kasih 06</h5>
+                <div class="lihat-detail-container">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="bi bi-eye"></i> Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Produk 7 (Awalnya Tersembunyi) -->
+          <div class="col-6 col-md-4 mb-4 produk-item d-none">
+            <div class="card h-100">
+              <img src="kasih/KASIH 07.jpeg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-nowrap">Kasih 07</h5>
+                <div class="lihat-detail-container">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="bi bi-eye"></i> Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Produk 8 (Awalnya Tersembunyi) -->
+          <div class="col-6 col-md-4 mb-4 produk-item d-none">
+            <div class="card h-100">
+              <img src="kasih/KASIH 08.jpeg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-nowrap">Kasih 08</h5>
+                <div class="lihat-detail-container">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="bi bi-eye"></i> Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Produk 9 (Awalnya Tersembunyi) -->
+          <div class="col-6 col-md-4 mb-4 produk-item d-none">
+            <div class="card h-100">
+              <img src="kasih/KASIH 09.jpeg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-nowrap">Kasih 09</h5>
+                <div class="lihat-detail-container">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="bi bi-eye"></i> Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Produk 11 (Awalnya Tersembunyi) -->
+          <div class="col-6 col-md-4 mb-4 produk-item d-none">
+            <div class="card h-100">
+              <img src="kasih/KASIH 11.jpeg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-nowrap">Kasih 11</h5>
+                <div class="lihat-detail-container">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="bi bi-eye"></i> Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Produk 12 (Awalnya Tersembunyi) -->
+          <div class="col-6 col-md-4 mb-4 produk-item d-none">
+            <div class="card h-100">
+              <img src="kasih/KASIH 12.jpeg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-nowrap">Kasih 12</h5>
+                <div class="lihat-detail-container">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="bi bi-eye"></i> Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Produk 13 (Awalnya Tersembunyi) -->
+          <div class="col-6 col-md-4 mb-4 produk-item d-none">
+            <div class="card h-100">
+              <img src="kasih/KASIH LITE 01.jpeg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-nowrap">Kasih Lite 01</h5>
+                <div class="lihat-detail-container">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="bi bi-eye"></i> Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Produk 14 (Awalnya Tersembunyi) -->
+          <div class="col-6 col-md-4 mb-4 produk-item d-none">
+            <div class="card h-100">
+              <img src="kasih/KASIH LITE 02.jpeg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-nowrap">Kasih Lite 02</h5>
+                <div class="lihat-detail-container">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="bi bi-eye"></i> Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Produk 15 (Awalnya Tersembunyi) -->
+          <div class="col-6 col-md-4 mb-4 produk-item d-none">
+            <div class="card h-100">
+              <img src="kasih/KASIH LITE 03.jpeg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-nowrap">Kasih Lite 03</h5>
+                <div class="lihat-detail-container">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="bi bi-eye"></i> Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tombol Show More / Show Less -->
+        <div class="text-center mt-4">
+          <button id="showMoreBtn" class="btn btn-primary">Show More</button>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2 class="text-center mb-4">Undangan Tema Kasih</h2>
+        <div class="row position-relative">
+          <!-- Produk 1 -->
+          <div class="col-6 col-md-4 mb-4 produk-item">
+            <div class="card h-100">
+              <img src="sayang/SAYANG 01.jpeg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-nowrap">Sayang 01</h5>
+                <div class="lihat-detail-container">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="bi bi-eye"></i> Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Produk 2 -->
+          <div class="col-6 col-md-4 mb-4 produk-item">
+            <div class="card h-100">
+              <img src="sayang/SAYANG 02.jpeg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-nowrap">Sayang 02</h5>
+                <div class="lihat-detail-container">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="bi bi-eye"></i> Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Produk 3 -->
+          <div class="col-6 col-md-4 mb-4 produk-item">
+            <div class="card h-100">
+              <img src="sayang/SAYANG 03.jpeg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-nowrap">Sayang 03</h5>
+                <div class="lihat-detail-container">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="bi bi-eye"></i> Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Produk 4 (Awalnya Tersembunyi) -->
+          <div class="col-6 col-md-4 mb-4 produk-item d-none">
+            <div class="card h-100">
+              <img src="SAYANG 04.jpeg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-nowrap">Sayang 04</h5>
+                <div class="lihat-detail-container">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="bi bi-eye"></i> Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tombol Show More / Show Less -->
+        <div class="text-center mt-4">
+          <button id="showMoreBtn" class="btn btn-primary">Show More</button>
+        </div>
+      </div>
+    </section>
