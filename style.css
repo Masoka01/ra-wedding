@@ -12,6 +12,34 @@ body {
   color: white;
 }
 
+.banner-image-container {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+  margin: 20px 0;
+  padding: 0 15px;
+}
+
+.banner-image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .banner-image-container {
+    max-height: 200px;
+    margin: 15px 0;
+    padding: 0 10px;
+  }
+
+  .banner-image-container img {
+    border-radius: 8px;
+  }
+}
+
 .container {
   padding: 20px;
 }
