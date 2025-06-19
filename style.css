@@ -252,3 +252,26 @@ h1 {
   background-color: #5a32a3;
   text-decoration: none;
 }
+
+/* Tooltip Hover Label */
+.whatsapp-fixed .hover-label,
+.formdata-fixed .hover-label,
+.fiturnama-fixed .hover-label {
+  position: absolute;
+  right: 60px;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.whatsapp-fixed:hover .hover-label,
+.formdata-fixed:hover .hover-label,
+.fiturnama-fixed:hover .hover-label {
+  opacity: 1;
+  visibility: visible;
+}
