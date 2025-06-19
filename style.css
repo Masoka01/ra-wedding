@@ -227,3 +227,28 @@ h1 {
   background-color: #3367d6;
   text-decoration: none;
 }
+
+/* Gaya untuk Fitur Nama Fixed */
+.fiturnama-fixed {
+  position: fixed;
+  bottom: 140px; /* Di atas tombol Form Data */
+  right: 20px;
+  background-color: #6f42c1; /* Warna ungu */
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.fiturnama-fixed:hover {
+  background-color: #5a32a3;
+  text-decoration: none;
+}
