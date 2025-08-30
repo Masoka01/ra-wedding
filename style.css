@@ -1,277 +1,578 @@
+/* ====== Theme Tokens ====== */
 :root {
-  --primary-color: #20c997;
-  --secondary-color: #17a2b8;
+  --brand: #0ea5e9; /* sky-500 */
+  --brand-600: #0284c7; /* sky-600 */
+  --accent: #22c55e; /* green-500 */
+  --ink: #0f172a; /* slate-900 */
+  --ink-soft: #334155; /* slate-700 */
+  --muted: #94a3b8; /* slate-400 */
+  --bg: #f8fafc; /* slate-50 */
+  --card: #ffffff;
+  --ring: rgba(14, 165, 233, 0.35);
+  --shadow: 0 6px 20px rgba(2, 8, 23, 0.08);
 }
 
+/* ====== Global Resets ====== */
+* {
+  box-sizing: border-box;
+}
+html,
 body {
-  font-family: Arial, sans-serif;
+  height: 100%;
+}
+body {
   margin: 0;
-  padding: 0;
-  text-align: center;
-  background: linear-gradient(to right, #20c997, #17a2b8);
-  color: white;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  color: var(--ink);
+  background: radial-gradient(
+      1200px 600px at 20% -10%,
+      rgba(14, 165, 233, 0.12) 0%,
+      rgba(14, 165, 233, 0) 70%
+    ),
+    radial-gradient(
+      1000px 500px at 120% 10%,
+      rgba(34, 197, 94, 0.1) 0%,
+      rgba(34, 197, 94, 0) 70%
+    ),
+    var(--bg);
+  line-height: 1.6;
 }
 
+/* Make Bootstrap buttons & headings match our palette */
+.btn-primary {
+  background: var(--brand);
+  border: none;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+.btn-primary:hover {
+  filter: saturate(115%);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(2, 132, 199, 0.35);
+}
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 6px var(--ring);
+}
+
+/* ====== Navbar ====== */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  backdrop-filter: saturate(140%) blur(8px);
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(2, 8, 23, 0.06);
+}
+.brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--ink);
+}
+.brand-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--brand), var(--accent));
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+}
+
+/* ====== Hero / Banner ====== */
 .banner-image-container {
   width: 100%;
-  max-height: 300px;
+  max-height: 420px;
   overflow: hidden;
-  margin: 20px 0;
-  padding: 0 15px;
+  border-radius: 18px;
+  box-shadow: 0 6px 14px rgba(2, 8, 23, 0.06);
 }
-
 .banner-image-container img {
   width: 100%;
-  height: auto;
+  height: 420px;
   object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: block;
 }
 
-@media (max-width: 768px) {
-  .banner-image-container {
-    max-height: 200px;
-    margin: 15px 0;
-    padding: 0 10px;
-  }
-
-  .banner-image-container img {
-    border-radius: 8px;
-  }
+.hero {
+  margin: 32px auto 12px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: clamp(28px, 3.2vw, 44px);
+  line-height: 1.15;
+  margin: 16px 0 8px;
+  letter-spacing: 0.2px;
+}
+.hero .sub {
+  color: var(--ink-soft);
+  max-width: 840px;
+  margin: 0 auto;
 }
 
-.container {
-  padding: 20px;
+/* ====== Section Headers ====== */
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 16px 0 28px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+.section-title .pill {
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  background: rgba(14, 165, 233, 0.12);
+  color: var(--brand-600);
+  border: 1px dashed rgba(14, 165, 233, 0.35);
 }
 
-h1 {
-  font-size: 2.5em;
+/* ====== Cards / Product Grid ====== */
+.row.position-relative {
+  row-gap: 18px;
 }
 
-.navbar {
-  background-color: var(--primary-color) !important;
-}
-
-.navbar-collapse {
-  background-color: white;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.navbar-nav .nav-link {
-  color: var(--primary-color) !important;
-}
-
-.navbar-nav .nav-link:focus,
-.navbar-nav .nav-link:active,
-.navbar-nav .nav-link:hover {
-  background-color: transparent !important;
-  color: var(--secondary-color) !important;
-}
-
-.navbar-toggler:focus,
-.navbar-toggler:active {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Style untuk fitur container */
-.feature-container {
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-/* Gaya Card */
 .card {
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--card);
   border: none;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(2, 8, 23, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
-/* Memastikan judul tidak melipat ke baris baru */
-.card-title.text-nowrap {
-  white-space: nowrap; /* Mencegah teks melipat ke baris baru */
-  overflow: hidden; /* Menyembunyikan teks yang melebihi container */
-  text-overflow: ellipsis; /* Menambahkan "..." jika teks terlalu panjang */
-}
-
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(2, 8, 23, 0.12);
 }
-
 .card-img-top {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  height: 200px;
+  object-fit: cover;
 }
 
 .card-body {
-  color: #333;
-  text-align: center; /* Teks di tengah */
+  padding: 14px 14px 16px;
+  text-align: center;
+}
+.card h5.card-title {
+  color: white !important;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 6px 0 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card h6 {
+  color: var(--accent);
+  font-weight: 800;
+  margin: 0 0 10px;
 }
 
-/* Tombol Lihat Detail */
-.btn-primary {
-  background-color: var(--primary-color);
-  border: none;
-  padding: 5px 10px; /* Padding diperkecil */
-  font-size: 0.875rem; /* Ukuran teks diperkecil (14px) */
-  color: white; /* Warna teks putih */
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: var(--secondary-color);
-}
-
-/* Garis Tengah */
-/* .row::after {
-  content: "";
+.price-badge {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 2px;
-  background-color: rgba(255, 255, 255, 0.3); 
-  transform: translateX(-50%);
-} */
-
-/* Produk Ganjil di Tengah */
-.row .produk-item:last-child:nth-child(odd) {
-  margin-left: auto;
-  margin-right: auto;
-  float: none;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(2, 8, 23, 0.06);
 }
-/* Gaya untuk Footer dengan Gelombang */
+
+/* CTA inside cards */
+.lihat-detail-container .btn {
+  width: 100%;
+}
+
+/* ====== Feature List Box ====== */
+.feature-container {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.82),
+    rgba(255, 255, 255, 0.92)
+  );
+  color: var(--ink);
+  border: 1px solid rgba(2, 8, 23, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(2, 8, 23, 0.06);
+}
+.feature-container ul li strong {
+  color: var(--ink);
+}
+
+/* ====== Show More Buttons ====== */
+.showmore-wrap {
+  text-align: center;
+}
+.showmore-wrap .btn {
+  min-width: 180px;
+  border-radius: 999px;
+}
+
+/* ====== Footer Waves ====== */
 .footer-wave {
   position: relative;
-  background-color: #20c997; /* Warna hijau toska */
-  color: white;
-  overflow: hidden; /* Pastikan gelombang tidak keluar dari container */
+  background: linear-gradient(
+    180deg,
+    rgba(14, 165, 233, 0.08),
+    rgba(14, 165, 233, 0.18)
+  );
+  color: var(--ink-soft);
+  margin-top: 40px;
+  border-top: 1px solid rgba(2, 8, 23, 0.06);
 }
-
 .wave-container {
   position: absolute;
-  top: -10px; /* Sesuaikan posisi gelombang */
+  top: -1px;
   left: 0;
   width: 100%;
-  height: 100px; /* Tinggi gelombang */
+  height: 88px;
+  opacity: 0.6;
 }
-
-.wave-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .wave-path {
-  fill: var(--secondary-color); /* Warna latar belakang gelap untuk kontras */
+  fill: url(#gradWave);
 }
-
-/* Gaya untuk Konten Footer */
 .footer-wave .container {
   position: relative;
-  z-index: 1; /* Pastikan konten di atas gelombang */
+  z-index: 1;
 }
 
-/* Gaya untuk WhatsApp Fixed */
-.whatsapp-fixed {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
-  z-index: 1000;
-  text-decoration: none;
-}
-
-.whatsapp-fixed:hover {
-  background-color: #128c7e;
-  text-decoration: none;
-}
-
-/* Gaya untuk Form Data Fixed */
-.formdata-fixed {
-  position: fixed;
-  bottom: 80px; /* Ditempatkan di atas tombol WhatsApp */
-  right: 20px;
-  background-color: #4285f4; /* Warna biru Google */
-  color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
-  z-index: 1000;
-  text-decoration: none;
-}
-
-.formdata-fixed:hover {
-  background-color: #3367d6;
-  text-decoration: none;
-}
-
-/* Gaya untuk Fitur Nama Fixed */
+/* ====== Floating Action Buttons ====== */
+.whatsapp-fixed,
+.formdata-fixed,
 .fiturnama-fixed {
-  position: fixed;
-  bottom: 140px; /* Di atas tombol Form Data */
-  right: 20px;
-  background-color: #6f42c1; /* Warna ungu */
-  color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
-  z-index: 1000;
-  text-decoration: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  font-size: 22px;
+  box-shadow: 0 10px 24px rgba(2, 8, 23, 0.18);
 }
-
+.whatsapp-fixed {
+  background: #25d366;
+}
+.formdata-fixed {
+  background: linear-gradient(45deg, #4285f4, #4f86f6);
+}
+.fiturnama-fixed {
+  background: linear-gradient(45deg, #8b5cf6, #6d28d9);
+}
+.whatsapp-fixed:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+.formdata-fixed:hover {
+  transform: translateY(-2px) scale(1.03);
+}
 .fiturnama-fixed:hover {
-  background-color: #5a32a3;
-  text-decoration: none;
+  transform: translateY(-2px) scale(1.03);
 }
 
-/* Tooltip Hover Label */
+/* Hover labels */
 .whatsapp-fixed .hover-label,
 .formdata-fixed .hover-label,
 .fiturnama-fixed .hover-label {
   position: absolute;
-  right: 60px;
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 5px 10px;
-  border-radius: 5px;
-  white-space: nowrap;
+  right: 66px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--ink);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
   font-size: 12px;
+  box-shadow: 0 6px 14px rgba(2, 8, 23, 0.06);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
-
 .whatsapp-fixed:hover .hover-label,
 .formdata-fixed:hover .hover-label,
 .fiturnama-fixed:hover .hover-label {
   opacity: 1;
   visibility: visible;
+  transform: translate(-2px, -50%);
+}
+
+/* ====== Utilities ====== */
+.container-narrow {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.text-gradient {
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .banner-image-container img {
+    height: 200px;
+  }
+}
+
+/* === Minimal Mobile Focus Tweaks === */
+@media (max-width: 768px) {
+  .topbar {
+    padding: 6px 0;
+  }
+  .hero {
+    margin: 20px auto 8px;
+  }
+  .card-img-top {
+    height: 160px;
+  }
+  .card-body {
+    padding: 12px;
+  }
+  .section-title {
+    margin: 8px 0 16px;
+    font-size: 1.1rem;
+  }
+  .showmore-wrap .btn {
+    min-width: 140px;
+  }
+}
+
+/* Remove unused floating buttons visually if any remain */
+.formdata-fixed,
+.fiturnama-fixed {
+  display: none !important;
+}
+
+/* === Minimalist Hero Title === */
+.hero-title-clean {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+/* Banner full width adjustments */
+.banner-image-container {
+  max-width: 100% !important;
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;
+}
+.banner-image-container img {
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* === Full-bleed banner & tighter hero === */
+.banner-full {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 0 0 8px;
+}
+.banner-full .banner-image-container {
+  border-radius: 0;
+}
+.banner-full .banner-image-container img {
+  height: 300px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: clamp(22px, 6vw, 28px);
+  }
+  .banner-full .banner-image-container img {
+    height: 200px;
+  }
+}
+
+/* === Dark Minimal Footer === */
+.footer-wave {
+  background: #0f172a;
+  color: #f1f5f9;
+  border: none;
+}
+.footer-wave .container p,
+.footer-wave a {
+  color: #f1f5f9 !important;
+}
+.footer-wave .wave-container {
+  display: none;
+}
+
+.banner-full .banner-image-container img {
+  object-fit: contain !important;
+  background: #000;
+}
+
+/* === Minimal flat footer === */
+.footer-minimal {
+  background: var(--card);
+  border-top: 1px solid rgba(2, 8, 23, 0.08);
+  color: var(--ink-soft);
+}
+
+/* === Banner: smaller & fully visible === */
+.banner-image-container {
+  background: var(--card);
+  padding: 8px;
+}
+.banner-image-container img {
+  object-fit: contain;
+  height: 220px;
+}
+
+/* === Auto Dark Mode === */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e5e7eb; /* light text */
+    --ink-soft: #cbd5e1;
+    --muted: #94a3b8;
+    --bg: #0b1220; /* deep slate */
+    --card: #0f172a;
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  }
+  body {
+    background: radial-gradient(
+        1000px 500px at 20% -10%,
+        rgba(14, 165, 233, 0.1) 0%,
+        rgba(14, 165, 233, 0) 70%
+      ),
+      radial-gradient(
+        800px 400px at 120% 10%,
+        rgba(34, 197, 94, 0.08) 0%,
+        rgba(34, 197, 94, 0) 70%
+      ),
+      var(--bg);
+  }
+  .topbar {
+    background: rgba(15, 23, 42, 0.7);
+    border-bottom-color: rgba(148, 163, 184, 0.15);
+  }
+  .brand-badge {
+    color: var(--ink);
+  }
+  .card {
+    background: var(--card);
+    border-color: rgba(148, 163, 184, 0.12);
+  }
+  .price-badge {
+    background: rgba(2, 6, 23, 0.6);
+    color: #fff;
+  }
+  .footer-minimal {
+    background: var(--card);
+    border-top-color: rgba(148, 163, 184, 0.15);
+    color: var(--ink-soft);
+  }
+  .input-group-text,
+  .form-control {
+    background: var(--card);
+    color: var(--ink);
+    border-color: rgba(148, 163, 184, 0.25);
+  }
+  .text-dark {
+    color: var(--ink) !important;
+  }
+}
+
+/* === Title Glow === */
+.title-glow {
+  color: #38bdf8;
+  text-shadow: 0 0 6px rgba(56, 189, 248, 0.6), 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+/* Remove black padding above/below banner */
+.banner-full {
+  margin: 0;
+  padding: 0;
+}
+.banner-full .banner-image-container {
+  padding: 0;
+  background: none;
+}
+
+/* Footer text readable */
+.footer-minimal,
+.footer-minimal a {
+  color: var(--muted) !important;
+}
+@media (prefers-color-scheme: dark) {
+  .footer-minimal,
+  .footer-minimal a {
+    color: var(--ink-soft) !important;
+  }
+}
+
+/* === Fix banner bars: no padding/bg, natural height === */
+.banner-image-container {
+  background: transparent;
+  padding: 0;
+}
+.banner-image-container img {
+  width: 100%;
+  height: auto !important;
+  object-fit: contain;
+  display: block;
+}
+
+/* === Hero title blue glow === */
+.hero-title {
+  color: var(--brand);
+  text-shadow: 0 0 10px rgba(14, 165, 233, 0.45),
+    0 0 22px rgba(14, 165, 233, 0.25);
+  letter-spacing: 0.2px;
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: clamp(22px, 6vw, 28px);
+  }
+}
+
+/* === Footer contrast improvements === */
+.footer-minimal {
+  color: var(--ink-soft);
+}
+.footer-minimal a {
+  color: #3b82f6;
+} /* brighter link */
+@media (prefers-color-scheme: dark) {
+  .footer-minimal {
+    color: #cbd5e1;
+  }
+  .footer-minimal a {
+    color: #60a5fa;
+  }
+}
+
+/* === Force all section titles to white === */
+.section-title {
+  color: #ffffff;
+}
+.section-title .pill {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Card titles white? or keep product names? The request was "judul kayak kasih dll" - product section titles, not card text. */
+
+/* Footer copyright to white */
+.footer-minimal {
+  color: #ffffff;
+}
+.footer-minimal a {
+  color: #3b82f6;
+}
+@media (prefers-color-scheme: dark) {
+  .footer-minimal {
+    color: #ffffff;
+  }
+  .footer-minimal a {
+    color: #60a5fa;
+  }
 }
